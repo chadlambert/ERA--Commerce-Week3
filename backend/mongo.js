@@ -1,17 +1,11 @@
-// Day 1
-const { MongoClient } = require('mongodb');
-
+const {MongoClient} = require('mongodb');
 let db;
-
 async function connectMongo() {
-  const client = new MongoClient(process.env.MONGO_URI);
-  await client.connect();
-  db = client.db('ecommerce_db');
-  console.log('MongoDB connected');
-}
-
+    const client = new MongoClient(process.env.MONGO_URI);
+    await client.connect();
+    db = client.db('MongoDB connected');
+};
 function getMongo() {
-  return db;
+    return db;
 }
-
-module.exports = { connectMongo, getMongo };
+module.exports = {connectMongo, getMongo};
