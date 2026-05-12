@@ -3,7 +3,8 @@ let db;
 async function connectMongo() {
     const client = new MongoClient(process.env.MONGO_URI);
     await client.connect();
-    db = client.db('MongoDB connected');
+     db = client.db('ecommerce_db');
+   console.log ('MongoDB connected');
 };
 function getMongo() {
     return db;
