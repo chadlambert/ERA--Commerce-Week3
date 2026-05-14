@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const authenticateToken = require("../middleware/authenticateToken");
+const authorizeRole = require("../middleware/authorizeRole");
+const {getSalesReport, getTopProducts, getCategorySales, getInventory} = require("../controllers/reportController");
+router.get("/sales", authenticateToken, authorizeRole("Admin"), getSalesReport);
+router.get("/top-products", authenticateToken, authorizeRole("Admin"), getTopProducts);
+router.get("/category-sales", authenticateToken, authorizeRole("Admin"), getCategorySales);
+router.get("/",authenticateToken , authorizeRole("Admin"), getInventory);
+module.exports = router;
