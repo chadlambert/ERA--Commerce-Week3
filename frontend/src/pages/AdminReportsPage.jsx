@@ -11,7 +11,7 @@ function AdminReportsPage({ currentUser, setCurrentView, token }) {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (currentUser.role !== 'admin') {
+    if (currentUser.role !== 'Admin') {
       return;
     }
     fetchReports();
@@ -80,7 +80,7 @@ function AdminReportsPage({ currentUser, setCurrentView, token }) {
     ).join(' ');
   };
 
-  if (currentUser.role !== 'admin') {
+  if (currentUser.role !== 'Admin') {
     return (
       <div className="p-6 max-w-6xl mx-auto">
         <div className="bg-white border rounded-lg p-6 text-center">

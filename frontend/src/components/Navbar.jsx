@@ -36,16 +36,16 @@ function Navbar({ currentUser, setCurrentView, setCurrentUser, setToken, cart })
           My Orders
         </button>
 
-        {currentUser?.role === 'admin' && (
+        {currentUser?.role === 'Admin' && (
           <>
             <button
-              onClick={() => setCurrentView('admin-products')}
+              onClick={() => setCurrentView('Admin-products')}
               className="text-slate-300 hover:text-white text-sm"
             >
               Manage Products
             </button>
             <button
-              onClick={() => setCurrentView('admin-reports')}
+              onClick={() => setCurrentView('Admin-reports')}
               className="text-slate-300 hover:text-white text-sm"
             >
               Reports
@@ -65,7 +65,7 @@ function Navbar({ currentUser, setCurrentView, setCurrentUser, setToken, cart })
         </span>
 
         <span className={`text-xs px-2 py-1 rounded text-white ${
-          currentUser?.role === 'admin' ? 'bg-purple-600' : 'bg-slate-600'
+          currentUser?.role === 'Admin' ? 'bg-purple-600' : 'bg-slate-600'
         }`}>
           {currentUser?.role}
         </span>

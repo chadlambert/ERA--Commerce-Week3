@@ -14,7 +14,7 @@ function OrdersPage({ currentUser, setCurrentView, setSelectedOrderId, token }) 
 
   const fetchOrders = async () => {
     try {
-      const endpoint = currentUser.role === 'admin' 
+      const endpoint = currentUser.role === 'Admin' 
         ? `${BASE_URL}/orders` 
         : `${BASE_URL}/orders/my`;
 
@@ -71,7 +71,7 @@ function OrdersPage({ currentUser, setCurrentView, setSelectedOrderId, token }) 
     <div className="p-6 max-w-6xl mx-auto">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-slate-800">
-          {currentUser.role === 'admin' ? 'All Orders' : 'My Orders'}
+          {currentUser.role === 'Admin' ? 'All Orders' : 'My Orders'}
         </h1>
         <p className="text-xs text-slate-400 italic">🛍️ Data from MySQL</p>
       </div>
@@ -86,7 +86,7 @@ function OrdersPage({ currentUser, setCurrentView, setSelectedOrderId, token }) 
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-4 py-3 text-left text-xs text-gray-500 uppercase">Order ID</th>
-                {currentUser.role === 'admin' && (
+                {currentUser.role === 'Admin' && (
                   <th className="px-4 py-3 text-left text-xs text-gray-500 uppercase">Customer</th>
                 )}
                 <th className="px-4 py-3 text-left text-xs text-gray-500 uppercase">Items</th>
@@ -105,7 +105,7 @@ function OrdersPage({ currentUser, setCurrentView, setSelectedOrderId, token }) 
                   }`}
                 >
                   <td className="px-4 py-3 text-sm font-mono">#{order.id}</td>
-                  {currentUser.role === 'admin' && (
+                  {currentUser.role === 'Admin' && (
                     <td className="px-4 py-3 text-sm">
                       {order.first_name} {order.last_name}
                     </td>

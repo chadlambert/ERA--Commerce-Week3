@@ -96,7 +96,7 @@ function App() {
           />
         );
 
-      case 'admin-products':
+      case 'Admin-products':
         return (
           <AdminProductsPage
             currentUser={currentUser}
@@ -105,7 +105,7 @@ function App() {
           />
         );
 
-      case 'admin-reports':
+      case 'Admin-reports':
         return (
           <AdminReportsPage
             currentUser={currentUser}

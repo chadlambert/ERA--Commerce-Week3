@@ -18,7 +18,7 @@ function AdminProductsPage({ currentUser, setCurrentView, token }) {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (currentUser.role !== 'admin') {
+    if (currentUser.role !== 'Admin') {
       return;
     }
     fetchData();
@@ -110,7 +110,7 @@ function AdminProductsPage({ currentUser, setCurrentView, token }) {
     }).format(price);
   };
 
-  if (currentUser.role !== 'admin') {
+  if (currentUser.role !== 'Admin') {
     return (
       <div className="p-6 max-w-6xl mx-auto">
         <div className="bg-white border rounded-lg p-6 text-center">

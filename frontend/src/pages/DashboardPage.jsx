@@ -56,7 +56,7 @@ function DashboardPage({ currentUser, setCurrentView, cart }) {
             Welcome back, {currentUser.first_name}!
           </h1>
           <span className={`text-xs px-2 py-1 rounded text-white ${
-            currentUser.role === 'admin' ? 'bg-purple-600' : 'bg-slate-600'
+            currentUser.role === 'Admin' ? 'bg-purple-600' : 'bg-slate-600'
           }`}>
             {currentUser.role}
           </span>
@@ -138,18 +138,18 @@ function DashboardPage({ currentUser, setCurrentView, cart }) {
         </div>
       </div>
 
-      {currentUser.role === 'admin' && (
+      {currentUser.role === 'Admin' && (
         <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
           <h2 className="text-xl font-bold text-slate-800 mb-4">Admin Panel</h2>
           <div className="flex gap-3">
             <button
-              onClick={() => setCurrentView('admin-products')}
+              onClick={() => setCurrentView('Admin-products')}
               className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
             >
               Manage Products
             </button>
             <button
-              onClick={() => setCurrentView('admin-reports')}
+              onClick={() => setCurrentView('Admin-reports')}
               className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
             >
               View Reports

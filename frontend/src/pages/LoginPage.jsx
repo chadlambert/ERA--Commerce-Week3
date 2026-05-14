@@ -198,7 +198,7 @@ function LoginPage({ setCurrentView, setCurrentUser, setToken }) {
                 className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-500"
               >
                 <option value="customer">Customer</option>
-                <option value="admin">Admin</option>
+                <option value="Admin">Admin</option>
               </select>
             </div>
             {registerError && (
